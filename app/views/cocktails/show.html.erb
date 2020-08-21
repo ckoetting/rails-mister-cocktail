@@ -1,0 +1,40 @@
+<body>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="#">
+    <img src="https://image.flaticon.com/icons/svg/920/920547.svg" />
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="btn btn-primary" href="/cocktails/new" role="button">Add new Cocktail</a>
+      </li>
+      <li class="nav-item">
+        <a class="btn btn-success" href="/cocktails/<%=@cocktail.id%>/doses/new" role="button">Add a new dose</a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%=image_path(@cocktail.image)%>);">
+  <div class="container">
+    <h1 id="cocktail-title"><%=@cocktail.name%></h1>
+    <%= link_to "Back to all Cocktails", "/cocktails/", class: "btn btn-info" %>
+  </div>
+</div>
+<div class="container">
+<div class="row">
+<% @cocktail.doses.each_with_index do |dose, index|%>
+ <div class="col-sm">
+<div class="card-product">
+  <div class="card-product-infos">
+    <h2><%= dose.ingredient.name%></h2>
+    <p><strong><%=dose.description%></strong></p>
+  </div>
+  </div>
+</div>
+<%end%>
+</div>
+</div>
+</body>
