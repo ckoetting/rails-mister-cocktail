@@ -3,10 +3,11 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .card-product {
   overflow: hidden;
-  height: 120px;
+  height: 130px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
+  border-radius: 6px;
   align-items: center;
   margin-bottom: 13px;
 }
@@ -45,7 +46,10 @@
   padding: 150px 0;
   text-align: center;
   margin-bottom: 20px;
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
 }
+
 
 .banner h1 {
   margin: 0;
@@ -99,4 +103,39 @@
 #card-image {
   width: 120px;
   height: 120px;
+}
+
+.form-container-cocktail {
+  margin: 20px;
+}
+
+.card-product-dose {
+  overflow: hidden;
+  color: white;
+  height: 120px;
+  border-radius: 8px;
+  background: #2E4057;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+
+.card-product-dose h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-product-dose p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product-dose .card-product-dose-infos {
+  padding: 16px;
 }

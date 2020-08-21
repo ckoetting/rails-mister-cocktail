@@ -1,16 +1,5 @@
-<body>
-<div class="fixed-top">
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-dark p-4">
-      <a class="btn btn-primary" href="/cocktails/new" role="button">Add new Cocktail</a>
-    </div>
-  </div>
-  <nav class="navbar navbar-dark bg-primary">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </nav>
-</div>
+<body style="background-color: #BBCDE5;">
+<div class="form-container-dose">
 <%= simple_form_for ([@cocktail, @dose]) do |f| %>
   <%= f.input :description %>
   <%= f.association :ingredient%>
