@@ -1,126 +1,18 @@
 <body>
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="#">
-    <img src="https://image.flaticon.com/icons/svg/920/920547.svg" />
-</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="btn btn-primary" href="/cocktails/new" role="button">Add new Cocktail</a>
-      </li>
-    </ul>
+<div class="fixed-top">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <a class="btn btn-primary" href="/cocktails/new" role="button">Add new Cocktail</a>
+    </div>
   </div>
+  <nav class="navbar navbar-dark bg-primary">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
 </div>
-<div class="form-container" style="margin: 30px;">
-<form class="simple_form new_dose" id="new_dose" novalidate="novalidate" action="/cocktails/3/doses" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="nZtOG8c8Tl5o+LnDx28HyE1B67skQuAH9EmkM5ao5+WBnIYkHDqzF9sJ4U2D3LA8OgMASmwZWRyLIhdN+bi+jQ==">
-  <div class="form-group string required dose_description"><label class="string required" for="dose_description">Description <abbr title="required">*</abbr></label><input class="form-control string required" type="text" name="dose[description]" id="dose_description"></div>
-  <div class="form-group select required dose_ingredient"><label class="select required" for="dose_ingredient_id">Ingredient <abbr title="required">*</abbr></label><select class="form-control select required" name="dose[ingredient_id]" id="dose_ingredient_id"><option value=""></option>
-<option value="1">Light rum</option>
-<option value="2">Applejack</option>
-<option value="3">Gin</option>
-<option value="4">Dark rum</option>
-<option value="5">Sweet Vermouth</option>
-<option value="6">Strawberry schnapps</option>
-<option value="7">Scotch</option>
-<option value="8">Apricot brandy</option>
-<option value="9">Triple sec</option>
-<option value="10">Southern Comfort</option>
-<option value="11">Orange bitters</option>
-<option value="12">Brandy</option>
-<option value="13">Lemon vodka</option>
-<option value="14">Blended whiskey</option>
-<option value="15">Dry Vermouth</option>
-<option value="16">Amaretto</option>
-<option value="17">Tea</option>
-<option value="18">Champagne</option>
-<option value="19">Coffee liqueur</option>
-<option value="20">Bourbon</option>
-<option value="21">Tequila</option>
-<option value="22">Vodka</option>
-<option value="23">Añejo rum</option>
-<option value="24">Bitters</option>
-<option value="25">Sugar</option>
-<option value="26">Kahlua</option>
-<option value="27">demerara Sugar</option>
-<option value="28">Dubonnet Rouge</option>
-<option value="29">Lime juice</option>
-<option value="30">Irish whiskey</option>
-<option value="31">Apple brandy</option>
-<option value="32">Carbonated water</option>
-<option value="33">Cherry brandy</option>
-<option value="34">Creme de Cacao</option>
-<option value="35">Grenadine</option>
-<option value="36">Port</option>
-<option value="37">Coffee brandy</option>
-<option value="38">Red wine</option>
-<option value="39">Rum</option>
-<option value="40">Grapefruit juice</option>
-<option value="41">Ricard</option>
-<option value="42">Sherry</option>
-<option value="43">Cognac</option>
-<option value="44">Sloe gin</option>
-<option value="45">Apple juice</option>
-<option value="46">Pineapple juice</option>
-<option value="47">Lemon juice</option>
-<option value="48">Sugar syrup</option>
-<option value="49">Milk</option>
-<option value="50">Strawberries</option>
-<option value="51">Chocolate syrup</option>
-<option value="52">Yoghurt</option>
-<option value="53">Mango</option>
-<option value="54">Ginger</option>
-<option value="55">Lime</option>
-<option value="56">Cantaloupe</option>
-<option value="57">Berries</option>
-<option value="58">Grapes</option>
-<option value="59">Kiwi</option>
-<option value="60">Tomato juice</option>
-<option value="61">Cocoa powder</option>
-<option value="62">Chocolate</option>
-<option value="63">Heavy cream</option>
-<option value="64">Galliano</option>
-<option value="65">Peach Vodka</option>
-<option value="66">Ouzo</option>
-<option value="67">Coffee</option>
-<option value="68">Spiced rum</option>
-<option value="69">Water</option>
-<option value="70">Espresso</option>
-<option value="71">Angelica root</option>
-<option value="72">Orange</option>
-<option value="73">Cranberries</option>
-<option value="74">Johnnie Walker</option>
-<option value="75">Apple cider</option>
-<option value="76">Everclear</option>
-<option value="77">Cranberry juice</option>
-<option value="78">Egg yolk</option>
-<option value="79">Egg</option>
-<option value="80">Grape juice</option>
-<option value="81">Peach nectar</option>
-<option value="82">Lemon</option>
-<option value="83">Firewater</option>
-<option value="84">Lemonade</option>
-<option value="85">Lager</option>
-<option value="86">Whiskey</option>
-<option value="87">Absolut Citron</option>
-<option value="88">Pisco</option>
-<option value="89">Irish cream</option>
-<option value="90">Ale</option>
-<option value="91">Chocolate liqueur</option>
-<option value="92">Midori melon liqueur</option>
-<option value="93">Sambuca</option>
-<option value="94">Cider</option>
-<option value="95">Sprite</option>
-<option value="96">7-Up</option>
-<option value="97">Blackberry brandy</option>
-<option value="98">Peppermint schnapps</option>
-<option value="99">Creme de Cassis</option>
-<option value="100">Jack Daniels</option>
-<option value="101">Ginger beer</option>
-<option value="102">Fever Tree Tonic Water</option></select></div>
-  <input type="submit" name="commit" value="Create Dose" class="btn btn-dark" data-disable-with="Create Dose">
-</form>
-</div>
-</body>
+<%= simple_form_for ([@cocktail, @dose]) do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient%>
+  <%= f.button :submit %>
+<% end %>

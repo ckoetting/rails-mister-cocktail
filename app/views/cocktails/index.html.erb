@@ -22,10 +22,11 @@
 <% @cocktails.each do |cocktail|%>
 <div class="col-sm">
 <div class="card-product">
+  <img src="<%=cl_image_path cocktail.photo.key%>"/>
   <div class="card-product-infos">
-    <h2><%= link_to cocktail.name, cocktail_path(cocktail), class: "btn btn-dark"%></h2>
+    <h2><a class="btn btn-dark" href="/cocktails/<%=cocktail.id%>" role="button"><%= cocktail.name %></a></h2>
   </div>
-  </div>
+</div>
 </div>
 <%end%>
 </div>

@@ -1,26 +1,22 @@
 <body>
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="#">
-    <img src="https://image.flaticon.com/icons/svg/920/920547.svg" />
-</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="btn btn-primary" href="/cocktails/new" role="button">Add new Cocktail</a>
-      </li>
-      <li class="nav-item">
-        <a class="btn btn-success" href="/cocktails/<%=@cocktail.id%>/doses/new" role="button">Add a new dose</a>
-      </li>
-    </ul>
+<div class="fixed-top">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <a class="btn btn-primary" href="/cocktails/new" role="button">Add new Cocktail</a>
+    </div>
   </div>
+  <nav class="navbar navbar-dark bg-primary">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
 </div>
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%=image_path(@cocktail.image)%>);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%=cl_image_path @cocktail.photo.key%>');">
   <div class="container">
     <h1 id="cocktail-title"><%=@cocktail.name%></h1>
     <%= link_to "Back to all Cocktails", "/cocktails/", class: "btn btn-info" %>
+    <a class="btn btn-success" href="/cocktails/<%=@cocktail.id%>/doses/new" role="button">Add a new Dose</a>
+    <%= link_to 'Delete Cocktail', cocktail_path(@cocktail), class: "btn btn-danger"%>
   </div>
 </div>
 <div class="container">
