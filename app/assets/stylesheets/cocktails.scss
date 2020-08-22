@@ -4,6 +4,7 @@
 .card-product {
   overflow: hidden;
   height: 130px;
+  max-width: 400px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -138,4 +139,25 @@
 
 .card-product-dose .card-product-dose-infos {
   padding: 16px;
+}
+
+.cocktails-container {
+  margin: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 15px;
+  justify-items: stretch;
+}
+
+@media(max-width: 992px) {
+  .cocktails-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(max-width: 768px) {
+  .cocktails-container {
+    grid-template-columns: 1fr;
+  }
 }

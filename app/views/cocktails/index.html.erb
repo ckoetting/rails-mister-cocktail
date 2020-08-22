@@ -5,10 +5,9 @@
     <p>A collection of the worlds best cocktails</p>
   </div>
 </div>
-<div class="container" style="width: 60%;">
-<div class="row">
+<div class="cocktails-container">
 <% @cocktails.each do |cocktail|%>
-<div class="col-sm">
+<div class="cocktail-card">
 <div class="card-product">
   <img src="<%=cl_image_path cocktail.photo.key%>"/>
   <div class="card-product-infos">
@@ -18,7 +17,6 @@
 </div>
 </div>
 <%end%>
-</div>
 </div>
 </body>
 <footer>
