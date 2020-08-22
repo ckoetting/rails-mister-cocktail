@@ -27,6 +27,8 @@ gem 'simple_form'
 gem 'faker'
 gem 'cloudinary', '~> 1.12.0'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'actionpack-page_caching'
+gem 'actionpack-action_caching'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
